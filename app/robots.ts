@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {salon} from '@/lib/salon';export const dynamic='force-static';export default function robots():MetadataRoute.Robots{return{rules:{userAgent:'*',...(salon.live?{allow:'/'}:{disallow:'/'})},sitemap:salon.url+'/sitemap.xml'}}

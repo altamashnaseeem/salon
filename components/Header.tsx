@@ -1,0 +1,4 @@
+'use client';
+import Link from 'next/link';
+import {useState} from 'react';
+export default function Header(){const [open,setOpen]=useState(false);return <header className="header"><Link href="/" className="logo" aria-label="Hair Court home">HAIR COURT<span>THE SALON EDIT · NOIDA</span></Link><nav aria-label="Main navigation" className={open?'nav open':'nav'}><Link onClick={()=>setOpen(false)} href="/#services">The services</Link><Link onClick={()=>setOpen(false)} href="/#philosophy">Our approach</Link><Link onClick={()=>setOpen(false)} href="/#gallery">The lookbook</Link><Link onClick={()=>setOpen(false)} href="/#visit">Find us</Link></nav><Link className="button small" href="/#booking">Let’s talk hair <span>→</span></Link><button className="menu" aria-label={open?'Close navigation':'Open navigation'} aria-expanded={open} onClick={()=>setOpen(!open)}>{open?'Close':'Menu'}</button></header>}

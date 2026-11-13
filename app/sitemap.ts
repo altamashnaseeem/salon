@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {salon,services} from '@/lib/salon';export const dynamic='force-static';export default function sitemap():MetadataRoute.Sitemap{return['/','/privacy/',...services.map(s=>'/services/'+s.slug+'/')].map(path=>({url:salon.url+path,changeFrequency:'monthly',priority:path==='/'?1:0.7}))}
